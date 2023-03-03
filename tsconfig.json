@@ -5,7 +5,8 @@
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "declaration": true
   },
-  "files": ["vector.ts"]
+  "files": ["vector.ts", "vector.d.ts"]
 }
