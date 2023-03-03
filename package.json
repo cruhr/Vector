@@ -29,7 +29,8 @@
     "url": "https://github.com/cruhr/Vector.git"
   },
   "files": [
-    "vector.js"
+    "vector.js",
+    "vector.d.ts"
   ],
   "types": "./vector.d.ts"
 }
