@@ -35,7 +35,7 @@ Add two vectors together by adding their individual x & y values.
 const v1 = new Vector(1, 1)
 const v2 = new Vector(2, 3)
 
-// expected result is a new vector with x = 4 and y = 5
+// expected result is a new vector with x = 3 and y = 4
 const v3 = Vector.add(v1, v2)
 ```
 
@@ -44,7 +44,7 @@ You can also use a single number as the second parameter which gets added to bot
 ```JS
 const v1 = new Vector(1, 2)
 
-// expected result is a new vector with x = 3 and y = 6
+// expected result is a new vector with x = 5 and y = 6
 const v2 = Vector.add(v1, 4)
 ```
 
@@ -53,8 +53,8 @@ const v2 = Vector.add(v1, 4)
 Substracts the second vector from the first one by substracting their individual x & y values.
 
 ```JS
-const v1 = new Vector(1, 1)
-const v2 = new Vector(2, 3)
+const v1 = new Vector(2, 3)
+const v2 = new Vector(1, 1)
 
 // expected result is a new vector with x = 1 and y = 2
 const v3 = Vector.substract(v1, v2)
