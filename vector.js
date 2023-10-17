@@ -17,22 +17,22 @@ var VectorMethods = (function () {
     function VectorMethods() {
     }
     VectorMethods.add = function (v1, v2) {
-        return typeof v2 === "object"
+        return typeof v2 === 'object'
             ? new Vector(v1.x + v2.x, v1.y + v2.y)
             : new Vector(v1.x + v2, v1.y + v2);
     };
     VectorMethods.substract = function (v1, v2) {
-        return typeof v2 === "object"
+        return typeof v2 === 'object'
             ? new Vector(v1.x - v2.x, v1.y - v2.y)
             : new Vector(v1.x - v2, v1.y - v2);
     };
     VectorMethods.multiply = function (v1, v2) {
-        return typeof v2 === "object"
+        return typeof v2 === 'object'
             ? new Vector(v1.x * v2.x, v1.y * v2.y)
             : new Vector(v1.x * v2, v1.y * v2);
     };
     VectorMethods.divide = function (v1, v2) {
-        return typeof v2 === "object"
+        return typeof v2 === 'object'
             ? new Vector(v1.x / v2.x, v1.y / v2.y)
             : new Vector(v1.x / v2, v1.y / v2);
     };
@@ -57,12 +57,12 @@ var VectorMethods = (function () {
         };
     };
     VectorMethods.min = function (v1, v2) {
-        return typeof v2 === "object"
+        return typeof v2 === 'object'
             ? new Vector(Math.min(v1.x, v2.x), Math.min(v1.y, v2.y))
             : new Vector(Math.min(v1.x, v2), Math.min(v1.y, v2));
     };
     VectorMethods.max = function (v1, v2) {
-        return typeof v2 === "object"
+        return typeof v2 === 'object'
             ? new Vector(Math.max(v1.x, v2.x), Math.max(v1.y, v2.y))
             : new Vector(Math.max(v1.x, v2), Math.max(v1.y, v2));
     };
@@ -70,9 +70,21 @@ var VectorMethods = (function () {
         return [Vector.min(v1, v2), Vector.max(v1, v2)];
     };
     VectorMethods.eq = function (v1, v2) {
-        return typeof v2 === "object"
+        return typeof v2 === 'object'
             ? v1.x === v2.x && v1.y === v2.y
             : v1.x === v2 && v1.y === v2;
+    };
+    VectorMethods.lt = function (v1, v2) {
+        return v1.x < v2.x && v1.y < v2.y;
+    };
+    VectorMethods.gt = function (v1, v2) {
+        return v1.x > v2.x && v1.y > v2.y;
+    };
+    VectorMethods.lte = function (v1, v2) {
+        return v1.x <= v2.x && v1.y <= v2.y;
+    };
+    VectorMethods.gte = function (v1, v2) {
+        return v1.x >= v2.x && v1.y >= v2.y;
     };
     return VectorMethods;
 }());
@@ -181,6 +193,18 @@ var Vector = (function (_super) {
     };
     Vector.prototype.eq = function (v2) {
         return Vector.eq(this, v2);
+    };
+    Vector.prototype.lt = function (v2) {
+        return Vector.lt(this, v2);
+    };
+    Vector.prototype.gt = function (v2) {
+        return Vector.gt(this, v2);
+    };
+    Vector.prototype.lte = function (v2) {
+        return Vector.lte(this, v2);
+    };
+    Vector.prototype.gte = function (v2) {
+        return Vector.gte(this, v2);
     };
     return Vector;
 }(VectorMethods));

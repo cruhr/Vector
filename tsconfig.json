@@ -8,5 +8,5 @@
     "moduleResolution": "node",
     "declaration": true
   },
-  "files": ["vector.ts", "vector.d.ts"]
+  "files": ["vector.ts"]
 }

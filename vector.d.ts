@@ -15,6 +15,10 @@ declare class VectorMethods {
     static max(v1: Vector, v2: Vector | number): Vector;
     static minAndMax(v1: Vector, v2: Vector | number): [Vector, Vector];
     static eq(v1: Vector, v2: Vector | number): boolean;
+    static lt(v1: Vector, v2: Vector): boolean;
+    static gt(v1: Vector, v2: Vector): boolean;
+    static lte(v1: Vector, v2: Vector): boolean;
+    static gte(v1: Vector, v2: Vector): boolean;
 }
 export default class Vector extends VectorMethods {
     private _x;
@@ -43,5 +47,9 @@ export default class Vector extends VectorMethods {
         z: number;
     };
     eq(v2: Vector | number): boolean;
+    lt(v2: Vector): boolean;
+    gt(v2: Vector): boolean;
+    lte(v2: Vector): boolean;
+    gte(v2: Vector): boolean;
 }
 export {};
