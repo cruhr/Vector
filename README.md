@@ -227,6 +227,76 @@ const res1 = Vector.eq(v1, 1)
 const res2 = Vector.eq(v2, 1)
 ```
 
+### Vector.lt()
+
+Checks if the first given vector has smaller x and y values than the second one
+
+```JS
+const v1 = new Vector(2, 2)
+const v2 = new Vector(1, 1)
+
+// should return false
+const res1 = Vector.lt(v1, v2)
+
+// should return true
+const res2 = Vector.lt(v2, v1)
+```
+
+### Vector.gt()
+
+Checks if the first given vector has greater x and y values than the second one
+
+```JS
+const v1 = new Vector(2, 2)
+const v2 = new Vector(1, 1)
+
+// should return true
+const res1 = Vector.gt(v1, v2)
+
+// should return false
+const res2 = Vector.gt(v2, v1)
+```
+
+### Vector.lte()
+
+Checks if the first given vector has smaller or equal x and y values than the second one
+
+```JS
+const v1 = new Vector(2, 2)
+const v2 = new Vector(1, 1)
+const v3 = new Vector(2, 2)
+
+// should return false
+const res1 = Vector.lte(v1, v2)
+
+// should return true
+const res2 = Vector.lte(v2, v1)
+
+// should return true
+const res1 = Vector.lte(v1, v3)
+
+```
+
+### Vector.gte()
+
+Checks if the first given vector has greater or equal x and y values than the second one
+
+```JS
+const v1 = new Vector(2, 2)
+const v2 = new Vector(1, 1)
+const v3 = new Vector(2, 2)
+
+// should return true
+const res1 = Vector.gte(v1, v2)
+
+// should return false
+const res2 = Vector.gte(v2, v1)
+
+// should return true
+const res1 = Vector.gte(v1, v3)
+
+```
+
 ## Instance properties
 
 Every vector instance comes with a few calculated properties for your convenience.
@@ -395,4 +465,66 @@ const res1 = v1.eq(v2)
 
 // should return true
 const res2 = v2.eq(v3)
+```
+
+### lt()
+
+```JS
+const v1 = new Vector(2, 2)
+const v2 = new Vector(1, 1)
+
+// should return false
+const res1 = v1.lt(v2)
+
+// should return true
+const res2 = v2.lt(v1)
+```
+
+### Vector.gt()
+
+```JS
+const v1 = new Vector(2, 2)
+const v2 = new Vector(1, 1)
+
+// should return true
+const res1 = v1.gt(v2)
+
+// should return false
+const res2 = v2.gt(v1)
+```
+
+### Vector.lte()
+
+```JS
+const v1 = new Vector(2, 2)
+const v2 = new Vector(1, 1)
+const v3 = new Vector(2, 2)
+
+// should return false
+const res1 = v1.lte(v2)
+
+// should return true
+const res2 = v2.lte(v1)
+
+// should return true
+const res1 = v1.lte(v3)
+
+```
+
+### Vector.gte()
+
+```JS
+const v1 = new Vector(2, 2)
+const v2 = new Vector(1, 1)
+const v3 = new Vector(2, 2)
+
+// should return true
+const res1 = v1.gte(v2)
+
+// should return false
+const res2 = v2.gte(v1)
+
+// should return true
+const res1 = v1.gte(v3)
+
 ```

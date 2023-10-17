@@ -32,5 +32,9 @@
     "vector.js",
     "vector.d.ts"
   ],
-  "types": "./vector.d.ts"
+  "types": "./vector.d.ts",
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  }
 }
