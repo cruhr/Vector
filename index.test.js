@@ -125,6 +125,52 @@ test('handles equality correctly for two vectors', () => {
   expect(v2.eq(v3)).toBe(true)
 })
 
+test('handles less-than comparison correctly for two vectors', () => {
+  const v1 = new Vector(3, -2)
+  const v2 = new Vector(0, -7)
+  const v3 = new Vector(1, 7)
+
+  expect(v1.lt(v2)).toBe(false)
+  expect(v2.lt(v1)).toBe(true)
+  expect(v1.lt(v3)).toBe(false)
+  expect(v2.lt(v3)).toBe(true)
+  expect(v3.lt(v2)).toBe(false)
+})
+
+test('handles greater-than comparison correctly for two vectors', () => {
+  const v1 = new Vector(3, -2)
+  const v2 = new Vector(0, -7)
+  const v3 = new Vector(1, 7)
+
+  expect(v1.gt(v2)).toBe(true)
+  expect(v2.gt(v1)).toBe(false)
+  expect(v1.gt(v3)).toBe(false)
+  expect(v2.gt(v3)).toBe(false)
+  expect(v3.gt(v2)).toBe(true)
+})
+
+test('handles less-than or equal comparison correctly', () => {
+  const v1 = new Vector(3, 2)
+  const v2 = new Vector(2, 1)
+  const v3 = new Vector(3, 2)
+
+  expect(v1.lte(v2)).toBe(false)
+  expect(v2.lte(v1)).toBe(true)
+  expect(v1.lte(v3)).toBe(true)
+  expect(v3.lte(v1)).toBe(true)
+})
+
+test('handles greater-than or equal comparison correctly', () => {
+  const v1 = new Vector(3, 2)
+  const v2 = new Vector(2, 1)
+  const v3 = new Vector(3, 2)
+
+  expect(v1.gte(v2)).toBe(true)
+  expect(v2.gte(v1)).toBe(false)
+  expect(v1.gte(v3)).toBe(true)
+  expect(v3.gte(v1)).toBe(true)
+})
+
 test('handles equality correctly for a vector and a number', () => {
   const v1 = new Vector(4, 4)
   const v2 = 4
@@ -188,7 +234,7 @@ test('calculates the correct absolute vector', () => {
 test('calculates the correct absolute min and max between two vectors', () => {
   const v1 = new Vector(4, -7)
   const v2 = new Vector(-4, 8)
-  const[min, max] = Vector.minAndMax(v1, v2)
+  const [min, max] = Vector.minAndMax(v1, v2)
 
   expect(min.x).toBe(-4)
   expect(min.y).toBe(-7)
@@ -199,7 +245,7 @@ test('calculates the correct absolute min and max between two vectors', () => {
 test('calculates the correct absolute min and max between a vector and a number', () => {
   const v1 = new Vector(4, -7)
   const v2 = 2
-  const[min, max] = Vector.minAndMax(v1, v2)
+  const [min, max] = Vector.minAndMax(v1, v2)
 
   expect(min.x).toBe(2)
   expect(min.y).toBe(-7)
