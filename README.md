@@ -149,7 +149,7 @@ const dot = Vector.dot(v1, v2)
 
 ### Vector.cross()
 
-Calculates and returns the cross product of two given vectors. Since the corss product is perpendigular to the plane of two axis this method should always return a 3 dimensional vector. When calculating the cross product of two 2 dimensional vectors the x and y value of their cross product must ALWAYS be 0. Nevertheless we return an object with x, y and z coordinates even though only z will ever be something else than 0.
+Calculates and returns the cross product of two given vectors. Since the cross product is perpendicular to the plane of two axis this method should always return a 3 dimensional vector. When calculating the cross product of two 2 dimensional vectors the x and y value of their cross product must ALWAYS be 0. Nevertheless we return an object with x, y and z coordinates even though only z will ever be something else than 0.
 
 ```JS
 const v1 = new Vector(5, 7)
